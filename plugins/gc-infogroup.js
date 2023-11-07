@@ -1,42 +1,42 @@
 const handler = async (m, {conn, participants, groupMetadata}) => {
-  const pp = await conn.profilePictureUrl(m.chat, 'image').catch((_) => null) || './src/avatar_contact.png';
+  const pp = await conn.profilePictureUrl(m.chat, 'image').catch((_) => null) || './src/SHADOW.jpeg';
   const {antiToxic, antiTraba, antidelete, antiviewonce, isBanned, welcome, detect, detect2, sWelcome, sBye, sPromote, sDemote, antiLink, antiLink2, modohorny, autosticker, modoadmin, audios, delete: del} = global.db.data.chats[m.chat];
   const groupAdmins = participants.filter((p) => p.admin);
   const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n');
   const owner = groupMetadata.owner || groupAdmins.find((p) => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net';
-  const text = `*「 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」*\n
-*𝙸𝙳𝙴𝙽𝚃𝙸𝙵𝙸𝙲𝙰𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾:* 
+    const text = `* 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 𝐁𝐘 @𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ⭐ *\n
+*𝐈𝐃𝐄𝐍𝐓𝐈𝐅𝐈𝐂𝐀𝐂𝐈𝐎𝐍 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎:* 
 ${groupMetadata.id}
 
-*𝙽𝙾𝙼𝙱𝚁𝙴:* 
+*𝐍𝐎𝐌𝐁𝐑𝐄:* 
 ${groupMetadata.subject}
 
-*𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽:* 
-${groupMetadata.desc?.toString() || '𝚂𝙸𝙽 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽'}
+*𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐂𝐈𝐎𝐍:* 
+${groupMetadata.desc?.toString() || '𝐒𝐈𝐍 𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐂𝐈𝐎𝐍'}
 
-*𝚃𝙾𝚃𝙰𝙻 𝙳𝙴 𝙿𝙰𝚁𝚃𝙸𝙲𝙸𝙿𝙰𝙽𝚃𝙴𝚂:*
+*𝐓𝐎𝐓𝐀𝐋 𝐃𝐄 𝐏𝐀𝐑𝐓𝐈𝐂𝐈𝐏𝐀𝐍𝐓𝐄𝐒:*
 ${participants.length} Participantes
 
-*𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾:* 
+*𝐂𝐑𝐄𝐀𝐃𝐎𝐑 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎:* 
 @${owner.split('@')[0]}
 
-*𝙰𝙳𝙼𝙸𝙽𝚂 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾:*
+*𝐀𝐃𝐌𝐈𝐍𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎:*
 ${listAdmin}
 
-*𝙾𝙿𝙲𝙸𝙾𝙽𝙴𝚂 𝙰𝚄𝚃𝙾𝙼𝙰𝚃𝙸𝙲𝙰𝚂:*
-—◉ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴: ${welcome ? '✅' : '❌'}
-—◉ 𝙳𝙴𝚃𝙴𝙲𝚃: ${detect ? '✅' : '❌'} 
-—◉ 𝙳𝙴𝚃𝙴𝙲𝚃 2: ${detect2 ? '✅' : '❌'} 
-—◉ 𝙰𝙽𝚃𝙸𝙻𝙸𝙽𝙺: ${antiLink ? '✅' : '❌'} 
-—◉ 𝙰𝙽𝚃𝙸𝙻𝙸𝙽𝙺 𝟸: ${antiLink2 ? '✅' : '❌'} 
-—◉ 𝙼𝙾𝙳𝙾 𝙷𝙾𝚁𝙽𝚈: ${modohorny ? '✅' : '❌'} 
-—◉ 𝙰𝚄𝚃𝙾𝚂𝚃𝙸𝙲𝙺𝙴𝚁: ${autosticker ? '✅' : '❌'} 
-—◉ 𝙰𝚄𝙳𝙸𝙾𝚂: ${audios ? '✅' : '❌'} 
-—◉ 𝙰𝙽𝚃𝙸𝚅𝙸𝙴𝚆𝙾𝙽𝙲𝙴: ${antiviewonce ? '✅' : '❌'} 
-—◉ 𝙰𝙽𝚃𝙸𝙳𝙴𝙻𝙴𝚃𝙴: ${antidelete ? '✅' : '❌'} 
-—◉ 𝙰𝙽𝚃𝙸𝚃𝙾𝚇𝙸𝙲: ${antiToxic ? '✅' : '❌'} 
-—◉ 𝙰𝙽𝚃𝙸𝚃𝚁𝙰𝙱𝙰: ${antiTraba ? '✅' : '❌'} 
-—◉ 𝙼𝙾𝙳𝙾𝙰𝙳𝙼𝙸𝙽: ${modoadmin ? '✅' : '❌'} 
+*𝐎𝐏𝐂𝐈𝐎𝐍𝐄𝐒 𝐀𝐔𝐓𝐎𝐌𝐀𝐓𝐈𝐂𝐀𝐒:*
+ 𝐖𝐄𝐋𝐂𝐎𝐌𝐄: ${welcome ? '✅' : '❌'}
+ 𝐃𝐄𝐓𝐄𝐂𝐓: ${detect ? '✅' : '❌'} 
+ 𝐃𝐄𝐓𝐄𝐂𝐓 𝟐: ${detect2 ? '✅' : '❌'} 
+ 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊: ${antiLink ? '✅' : '❌'} 
+ 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊 𝟐: ${antiLink2 ? '✅' : '❌'} 
+ 𝐌𝐎𝐃𝐎 𝐇𝐎𝐑𝐍𝐘: ${modohorny ? '✅' : '❌'} 
+ 𝐀𝐔𝐓𝐎𝐒𝐓𝐈𝐂𝐊𝐄𝐑: ${autosticker ? '✅' : '❌'} 
+ 𝐀𝐔𝐃𝐈𝐎𝐒: ${audios ? '✅' : '❌'} 
+ 𝐀𝐍𝐓𝐈𝐕𝐈𝐄𝐖𝐎𝐍𝐂𝐄: ${antiviewonce ? '✅' : '❌'} 
+ 𝐀𝐍𝐓𝐈𝐃𝐄𝐋𝐄𝐓𝐄: ${antidelete ? '✅' : '❌'} 
+ 𝐀𝐍𝐓𝐈𝐓𝐎𝐗𝐈𝐂: ${antiToxic ? '✅' : '❌'} 
+ 𝐀𝐍𝐓𝐈𝐓𝐑𝐀𝐁𝐀: ${antiTraba ? '✅' : '❌'} 
+ 𝐌𝐎𝐃𝐎𝐀𝐃𝐌𝐈𝐍: ${modoadmin ? '✅' : '❌'} 
 `.trim();
   conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, {mentions: [...groupAdmins.map((v) => v.id), owner]});
 };
