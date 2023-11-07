@@ -48,7 +48,7 @@ global.imagen1 = fs.readFileSync('./SHADOW.jpeg');
 global.imagen2 = fs.readFileSync('./src/SHADOW.jpeg');
 global.imagen3 = fs.readFileSync('./src/SHADOW.jpeg');
 global.imagen4 = fs.readFileSync('./SHADOW.jpeg');
-global.imagen5 = fs.readFileSync('./src/+18.jp');
+global.imagen5 = fs.readFileSync('./src/+18.jpg');
 global.imagen6 = fs.readFileSync('./SHADOW.jpeg');
 
 global.mods = [];
