@@ -1179,13 +1179,13 @@ export async function handler(chatUpdate) {
             if (user.bannedMessageCount < 3) {
               const messageNumber = user.bannedMessageCount + 1;
 const messageText = `
-╔═════════════════════╗
- ❰ ⚠️ ❱ *¡USUARIO BANEADO!* ❰ ⚠️ ❱
-—◉ *Aviso ${messageNumber}/3 (Total: 3)*
-—◉ ${user.bannedReason ? `\n*Motivo:* ${user.bannedReason}` : '*Motivo:* Sin especificar'}
-—◉ *Si consideras que esto es un error y cuentas con pruebas, puedes comunicarte con el propietario del Bot para apelar la suspensión.*
-—◉ *Contacto para apelaciones:* wa.me/5219992095479
-╚═════════════════════╝
+
+ *!𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐁𝐀𝐍𝐄𝐀𝐃𝐎!*
+ *Aviso ${messageNumber}/3 (Total: 3)*
+ ${user.bannedReason ? `\n*Motivo:* ${user.bannedReason}` : '*Motivo:* Sin especificar'}
+ *Si consideras que esto es un error y cuentas con pruebas, puedes comunicarte con el propietario del Bot para apelar la suspensión.*
+ *Contacto para apelaciones:* wa.me/5219992095479
+
                `.trim();
               m.reply(messageText);
               user.bannedMessageCount++;
@@ -1425,7 +1425,7 @@ export async function participantsUpdate({id, participants, action}) {
       if (chat.welcome && !chat?.isBanned) {
         const groupMetadata = await m.conn.groupMetadata(id) || (conn.chats[id] || {}).metadata;
         for (const user of participants) {
-          let pp = './src/avatar_contact.png';
+          let pp = './src/SHADOW.jpeg';
           try {
             pp = await m.conn.profilePictureUrl(user, 'image');
           } catch (e) {
@@ -1435,7 +1435,7 @@ export async function participantsUpdate({id, participants, action}) {
             const userPrefix = antiArab.some((prefix) => user.startsWith(prefix));
             const botTt2 = groupMetadata.participants.find((u) => m.conn.decodeJid(u.id) == m.conn.user.jid) || {};
             const isBotAdminNn = botTt2?.admin === 'admin' || false;
-            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await m.conn.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝚂𝙸𝙽 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽*') :
+            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await m.conn.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝐒𝐈𝐍 𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐂𝐈𝐎𝐍*') :
                               (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0]);
             if (userPrefix && chat.antiArab && botTt.restrict && isBotAdminNn && action === 'add') {
               const responseb = await m.conn.groupParticipantsUpdate(id, [user], 'remove');
@@ -1500,8 +1500,8 @@ export async function callUpdate(callUpdate) {
         const callmsg = await mconn.conn.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, las ${nk.isVideo ? 'videollamadas' : 'llamadas'} no están permitidas, serás bloqueado.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, {mentions: [nk.from]});
         // let data = global.owner.filter(([id, isCreator]) => id && isCreator)
         // await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑;;;\nFN:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nORG:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nTITLE:\nitem1.TEL;waid=5219992095479:+521 999 209 5479\nitem1.X-ABLabel:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑\nEND:VCARD`;
-        await mconn.conn.sendMessage(nk.from, {contacts: {displayName: '𝐁𝐫𝐮𝐧𝐨 𝐒𝐨𝐛𝐫𝐢𝐧𝐨 👑', contacts: [{vcard}]}}, {quoted: callmsg});
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️;;;\nFN:@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️\nORG:@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️\nTITLE:\nitem1.TEL;waid=50253501417:+502 5350 1417\nitem1.X-ABLabel:@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️\nX-WA-BIZ-DESCRIPTION:[❗] 𝐂𝐎𝐍𝐓𝐀𝐂𝐓𝐀𝐌𝐄 𝐏𝐀𝐑𝐀 𝐂𝐑𝐄𝐀𝐑 𝐓𝐔 𝐏𝐑𝐎𝐏𝐈𝐎 𝐁𝐎𝐓 𝐏𝐄𝐑𝐒𝐎𝐍𝐀𝐋𝐈𝐙𝐀𝐃𝐎.\nX-WA-BIZ-NAME:@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️\nEND:VCARD`;
+        await mconn.conn.sendMessage(nk.from, {contacts: {displayName: '@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️', contacts: [{vcard}]}}, {quoted: callmsg});
         await mconn.conn.updateBlockStatus(nk.from, 'block');
       }
     }
@@ -1521,15 +1521,15 @@ let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'nu
         if (!msg) return 
 	if (!msg?.isGroup) return 
 	const antideleteMessage = `
-┏━━━━━━━━━⬣  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ⬣━━━━━━━━━
-*■ Usuario:* @${participant.split`@`[0]}
-*■ Hora:* ${time}
-*■ Fecha:* ${date}
-*■ Enviando el mensaje eliminado...*
+        𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ☁️
+* Usuario:* @${participant.split`@`[0]}
+* Hora:* ${time}
+* Fecha:* ${date}
+* Enviando el mensaje eliminado...*
     
-*■ Para desactivar esta función, escribe el comando:*
-*—◉ #disable antidelete*
-┗━━━━━━━━━⬣  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀  ⬣━━━━━━━━━`.trim();
+* Para desactivar esta función, escribe el comando:*
+* #disable antidelete*
+       𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 ☁️ `.trim();
         await mconn.conn.sendMessage(msg.chat, {text: antideleteMessage, mentions: [participant]}, {quoted: msg})
         mconn.conn.copyNForward(msg.chat, msg).catch(e => console.log(e, msg))
     } catch (e) {
@@ -1539,19 +1539,19 @@ let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'nu
 
 global.dfail = (type, m, conn) => {
   const msg = {
-    rowner: '*[ ⚠️ ] Este comando solo puede ser utilizado por el/la propietario(a) (owner) del Bot.*',
-    owner: '*[ ⚠️ ] Este comando solo puede ser utilizado por el/la propietario(a) (owner) del Bot.*',
-    mods: '*[ ⚠️ ] Este comando solo puede ser utilizado por moderadores y el/la propietario(a) (owner) del Bot.*',
-    premium: '*[ ⚠️ ] Este comando solo puede ser utilizado por usarios premium y el/la propietario(a) (owner) del Bot.*',
-    group: '*[ ⚠️ ] Este comando solo puede ser utilizado en grupos.*',
-    private: '*[ ⚠️ ] Este comando solo puede ser utilizado en el chat privado del Bot.*',
-    admin: '*[ ⚠️ ] Este comando solo puede ser usado por admins del grupo.*',
-    botAdmin: '*[ ⚠️ ] Para poder usar este comando es necesario que yo sea admin.*',
-    unreg: '*[ 🛑 Hey!! Alto, no estas registrado 🛑 ]*\n\n*—◉ Para poder usar este comando debes registrarte, usa el comando:*\n*➣ #verificar nombre.edad*',
-    restrict: '*[ ⚠️ ] Este comando esta restringido/desactivado por desición del propietario(a) (owner) del Bot.*',
+    rowner: '* ⚠️ Este comando solo puede ser utilizado por el/la propietario(a) (owner) del Bot.*',
+    owner: '* ⚠️ Este comando solo puede ser utilizado por el/la propietario(a) (owner) del Bot.*',
+    mods: '* ⚠️ Este comando solo puede ser utilizado por moderadores y el/la propietario(a) (owner) del Bot.*',
+    premium: '* ⚠️ Este comando solo puede ser utilizado por usarios premium y el/la propietario(a) (owner) del Bot.*',
+    group: '* ⚠️ Este comando solo puede ser utilizado en grupos.*',
+    private: '* ⚠️ Este comando solo puede ser utilizado en el chat privado del Bot.*',
+    admin: '* ⚠️ Este comando solo puede ser usado por admins del grupo.*',
+    botAdmin: '* ⚠️ Para poder usar este comando es necesario que yo sea admin.*',
+    unreg: '* 🛑 Hey!! Alto, no estas registrado 🛑 *\n\n* Para poder usar este comando debes registrarte, usa el comando:*\n*➣ #verificar nombre.edad*',
+    restrict: '* ⚠️ Este comando esta restringido/desactivado por desición del propietario(a) (owner) del Bot.*',
   }[type];
   const aa = {quoted: m, userJid: conn.user.jid};
-  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '[ ⚠ ] 𝐀𝐕𝐈𝐒𝐎 - 𝐀𝐋𝐄𝐑𝐓𝐀', body: 'ᴛʜᴇ ᴍʏsᴛɪᴄ - ʙᴏᴛ', thumbnail: imagen1, sourceUrl: 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'}}}}, aa);
+  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: ' 𝐀𝐕𝐈𝐒𝐎 - 𝐀𝐋𝐄𝐑𝐓𝐀', body: '@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃', thumbnail: imagen1, sourceUrl: 'https://github.com/Mlarios-2021097/Larios.Bot'}}}}, aa);
   if (msg) return conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id});
 };
 
