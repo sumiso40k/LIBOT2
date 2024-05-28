@@ -44,12 +44,12 @@ global.titulowm2 = `𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕`
 global.igfg = '𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕';
 global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
 
-global.imagen1 = fs.readFileSync('./SHADOW.jpeg');
-global.imagen2 = fs.readFileSync('./src/SHADOW.jpeg');
-global.imagen3 = fs.readFileSync('./src/SHADOW.jpeg');
-global.imagen4 = fs.readFileSync('./SHADOW.jpeg');
-global.imagen5 = fs.readFileSync('./src/+18.jpg');
-global.imagen6 = fs.readFileSync('./SHADOW.jpeg');
+global.imagen1 = fs.readFileSync('./allmenu.png');
+global.imagen2 = fs.readFileSync('./src/newavatar.png');
+global.imagen3 = fs.readFileSync('./src/newavatar.png');
+global.imagen4 = fs.readFileSync('./allmenu.png');
+global.imagen5 = fs.readFileSync('./src/newavatar.png');
+global.imagen6 = fs.readFileSync('./allmenu.png');
 
 global.mods = [];
 
