@@ -108,7 +108,7 @@ loadChatgptDB();
 
 /* ------------------------------------------------*/
 
-global.authFile = `MysticSession`;
+global.authFile = `Sʜᴀᴅᴏᴡs Bᴏᴛ`;
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -124,7 +124,7 @@ const connectionOptions = {
         logger: pino({ level: 'silent' }),
         printQRInTerminal: !pairingCode, 
         mobile: useMobile, 
-        browser: ['Chrome (Linux)', '', ''],
+        browser: ['Sʜᴀᴅᴏᴡs Bᴏᴛ (Linux)', '', ''],
         auth: {
             creds: state.creds,
             keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
@@ -152,16 +152,16 @@ global.conn = makeWASocket(connectionOptions);
             numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
 
             if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-                console.log(chalk.bgBlack(chalk.redBright("Comience con el código de país de su número de WhatsApp, Ejemplo: +5219992095479")))
+                console.log(chalk.bgBlack(chalk.redBright("Comience con el código de país de su número de WhatsApp, Ejemplo: +5214611461431")))
                 process.exit(0)
             }
         } else {
-            numeroTelefono = await question(chalk.bgBlack(chalk.greenBright(`Por favor, escriba su número de WhatsApp 😍\nPor ejemplo: +5219992095479 : `)))
+            numeroTelefono = await question(chalk.bgBlack(chalk.greenBright(`Por favor, escriba su número de WhatsApp 😍\nPor ejemplo: +5214611461431 : `)))
             numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
             if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-                console.log(chalk.bgBlack(chalk.redBright("Comience con el código de país de su número de WhatsApp, Ejemplo: +5219992095479")))
+                console.log(chalk.bgBlack(chalk.redBright("Comience con el código de país de su número de WhatsApp, Ejemplo: +5214611461431")))
 
-                numeroTelefono = await question(chalk.bgBlack(chalk.greenBright(`Por favor, escriba su número de WhatsApp 😍\nPor ejemplo: +5219992095479 : `)))
+                numeroTelefono = await question(chalk.bgBlack(chalk.greenBright(`Por favor, escriba su número de WhatsApp 😍\nPor ejemplo: +5214611461431 : `)))
                 numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
                 rl.close()
             }
@@ -176,7 +176,7 @@ global.conn = makeWASocket(connectionOptions);
 
 conn.isInit = false;
 conn.well = false;
-conn.logger.info(`Ƈᴀʀɢᴀɴᴅᴏ．．．\n`);
+conn.logger.info(`[❗] 𝑪𝒂𝒓𝒈𝒂𝒏𝒅𝒐, 𝑬𝒔𝒑𝒆𝒓𝒆 𝑼𝒏 𝑴𝒐𝒎𝒆𝒏𝒕𝒐..\n`);
 
 if (!opts['test']) {
   if (global.db) {
@@ -351,14 +351,14 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-  conn.welcome = ' @subject\n @user\n 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐎/𝐀 \n\n 𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐂𝐈𝐎𝐍:\n\n@desc\n\n ⭐ 𝐒𝐇𝐀𝐃𝐎𝐖.𝐁𝐎𝐓 ⭐\n';
-  conn.bye = ' @user\n 𝐀𝐃𝐈𝐎𝐒! 👋🏻 \n ⭐ 𝐒𝐇𝐀𝐃𝐎𝐖.𝐁𝐎𝐓 ⭐';
-  conn.spromote = '@user 𝐒𝐄 𝐒𝐔𝐌𝐀 𝐀𝐋 𝐆𝐑𝐔𝐏𝐎 𝐃𝐄 𝐀𝐃𝐌𝐈𝐍𝐒';
-  conn.sdemote = '@user 𝐀𝐁𝐀𝐍𝐃𝐎𝐍𝐀 𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 𝐃𝐄 𝐀𝐃𝐌𝐈𝐍𝐒';
-  conn.sDesc = '𝐒𝐄 𝐇𝐀 𝐌𝐎𝐃𝐈𝐅𝐈𝐂𝐀𝐃𝐎 𝐋𝐀 𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐂𝐈𝐎𝐍 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎*\n\n*𝐍𝐔𝐄𝐕𝐀 𝐃𝐄𝐒𝐂𝐑𝐈𝐏𝐂𝐈𝐎𝐍: @desc';
-  conn.sSubject = '𝐒𝐄 𝐇𝐀 𝐌𝐎𝐃𝐈𝐅𝐈𝐂𝐀𝐃𝐎 𝐄𝐋 𝐍𝐎𝐌𝐁𝐑𝐄 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎*\n*𝐍𝐔𝐄𝐕𝐎 𝐍𝐎𝐌𝐁𝐑𝐄: @subject';
-  conn.sIcon = '𝐒𝐄 𝐇𝐀 𝐂𝐀𝐌𝐁𝐈𝐀𝐃𝐎 𝐋𝐀 𝐅𝐎𝐓𝐎 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎';
-  conn.sRevoke = '𝐒𝐄 𝐇𝐀 𝐂𝐀𝐌𝐁𝐈𝐀𝐃𝐎 𝐄𝐋 𝐋𝐈𝐍𝐊 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎*\n*𝐍𝐔𝐄𝐕𝐎 𝐋𝐈𝐍𝐊: @revoke';
+  conn.welcome = '@subject\n @user\n 𝑩𝒊𝒆𝒏𝒗𝒆𝒏𝒊𝒅𝒙 \n\n 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐜𝐢𝐨𝐧:\n\n@desc\n\n 𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕\n\n';
+  conn.bye = '@user\n 𝑯𝒂𝒔𝒕𝒂 𝑵𝒖𝒏𝒄𝒂 !! \n𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕';
+  conn.spromote = '*@user 𝑺𝒆 𝑺𝒖𝒎𝒂 𝑨𝒍 𝑮𝒓𝒖𝒑𝒐 𝑫𝒆 𝑨𝒅𝒎𝒊𝒏𝒔.*';
+  conn.sdemote = '*@user 𝑨𝒃𝒂𝒏𝒅𝒐𝒏𝒂 𝑬𝒍 𝑮𝒓𝒖𝒑𝒐 𝑫𝒆 𝑨𝒅𝒎𝒊𝒏𝒔.*';
+  conn.sDesc = '*𝑺𝒆 𝑯𝒂 𝑴𝒐𝒅𝒊𝒇𝒊𝒄𝒂𝒅𝒐 𝑳𝒂 𝑫𝒆𝒔𝒄𝒓𝒊𝒑𝒄𝒊𝒐𝒏 𝑫𝒆𝒍 𝑮𝒓𝒖𝒑𝒐*\n\n*𝐍𝐮𝐞𝐯𝐚 𝐃𝐞𝐬𝐜: @desc.*';
+  conn.sSubject = '*𝑺𝒆 𝑯𝒂 𝑴𝒐𝒅𝒊𝒇𝒊𝒄𝒂𝒅𝒐 𝑬𝒍 𝑵𝒐𝒎𝒃𝒓𝒆 𝑫𝒆𝒍 𝑮𝒓𝒖𝒑𝒐*\n*𝐍𝐮𝐞𝐯𝐨 𝐍𝐨𝐦𝐛𝐫𝐞: @subject.*';
+  conn.sIcon = '*𝑺𝒆 𝑯𝒂 𝑴𝒐𝒅𝒊𝒇𝒊𝒄𝒂𝒅𝒐 𝑳𝒂 𝑰𝒎𝒂𝒈𝒆𝒏 𝑫𝒆 𝑮𝒓𝒖𝒑𝒐.*';
+  conn.sRevoke = '*𝑬𝒍 𝑳𝒊𝒏𝒌 𝑫𝒆 𝑮𝒓𝒖𝒑𝒐 𝑯𝒂 𝑺𝒊𝒅𝒐 𝑹𝒆𝒔𝒕𝒂𝒃𝒍𝒆𝒄𝒊𝒅𝒐*\n*𝐍𝐮𝐞𝐯𝐨 𝐋𝐢𝐧𝐤: @revoke.*';
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
@@ -512,7 +512,7 @@ setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   const _uptime = process.uptime() * 1000;
   const uptime = clockString(_uptime);
-  const bio = ` 𝐓𝐈𝐄𝐌𝐏𝐎 𝐀𝐂𝐓𝐈𝐕𝐎 🤖: ${uptime} ┃ 𝐂𝐑𝐄𝐀𝐃𝐎𝐑: @𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️ ┃ 🔗 𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌: @𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃`;
+  const bio = ` 𝑻𝒊𝒆𝒎𝒑𝒐 𝑨𝒄𝒕𝒊𝒗𝒐: ${uptime} 𝑩𝒚 𝑺𝒉𝒂𝒅𝒐𝒘   𝒊𝒈:@𝒔𝒉𝒂𝒅𝒐𝒘.𝒗𝒛`;
   await conn.updateProfileStatus(bio).catch((_) => _);
 }, 60000);
 function clockString(ms) {
