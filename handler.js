@@ -1425,7 +1425,7 @@ export async function participantsUpdate({id, participants, action}) {
       if (chat.welcome && !chat?.isBanned) {
         const groupMetadata = await m.conn.groupMetadata(id) || (conn.chats[id] || {}).metadata;
         for (const user of participants) {
-          let pp = './src/SHADOW.jpeg';
+          let pp = './src/newavatar.png';
           try {
             pp = await m.conn.profilePictureUrl(user, 'image');
           } catch (e) {
@@ -1500,8 +1500,8 @@ export async function callUpdate(callUpdate) {
         const callmsg = await mconn.conn.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, las ${nk.isVideo ? 'videollamadas' : 'llamadas'} no están permitidas, serás bloqueado.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, {mentions: [nk.from]});
         // let data = global.owner.filter(([id, isCreator]) => id && isCreator)
         // await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️;;;\nFN:@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️\nORG:@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️\nTITLE:\nitem1.TEL;waid=50253501417:+502 5350 1417\nitem1.X-ABLabel:@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️\nX-WA-BIZ-DESCRIPTION:[❗] 𝐂𝐎𝐍𝐓𝐀𝐂𝐓𝐀𝐌𝐄 𝐏𝐀𝐑𝐀 𝐂𝐑𝐄𝐀𝐑 𝐓𝐔 𝐏𝐑𝐎𝐏𝐈𝐎 𝐁𝐎𝐓 𝐏𝐄𝐑𝐒𝐎𝐍𝐀𝐋𝐈𝐙𝐀𝐃𝐎.\nX-WA-BIZ-NAME:@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️\nEND:VCARD`;
-        await mconn.conn.sendMessage(nk.from, {contacts: {displayName: '@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃 ☁️', contacts: [{vcard}]}}, {quoted: callmsg});
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕;;;\nFN:𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕\nORG:𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕\nTITLE:\nitem1.TEL;waid=5215541081250:+5215541081250\nitem1.X-ABLabel:𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕\nX-WA-BIZ-DESCRIPTION:[❗] 𝐂𝐎𝐍𝐓𝐀𝐂𝐓𝐀𝐌𝐄 𝐏𝐀𝐑𝐀 𝐂𝐑𝐄𝐀𝐑 𝐓𝐔 𝐏𝐑𝐎𝐏𝐈𝐎 𝐁𝐎𝐓 𝐏𝐄𝐑𝐒𝐎𝐍𝐀𝐋𝐈𝐙𝐀𝐃𝐎.\nX-WA-BIZ-NAME:𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕\nEND:VCARD`;
+        await mconn.conn.sendMessage(nk.from, {contacts: {displayName: '𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕', contacts: [{vcard}]}}, {quoted: callmsg});
         await mconn.conn.updateBlockStatus(nk.from, 'block');
       }
     }
@@ -1539,19 +1539,19 @@ let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'nu
 
 global.dfail = (type, m, conn) => {
   const msg = {
-    rowner: '* ⚠️ Este comando solo puede ser utilizado por el/la propietario(a) (owner) del Bot.*',
-    owner: '* ⚠️ Este comando solo puede ser utilizado por el/la propietario(a) (owner) del Bot.*',
-    mods: '* ⚠️ Este comando solo puede ser utilizado por moderadores y el/la propietario(a) (owner) del Bot.*',
-    premium: '* ⚠️ Este comando solo puede ser utilizado por usarios premium y el/la propietario(a) (owner) del Bot.*',
-    group: '* ⚠️ Este comando solo puede ser utilizado en grupos.*',
-    private: '* ⚠️ Este comando solo puede ser utilizado en el chat privado del Bot.*',
-    admin: '* ⚠️ Este comando solo puede ser usado por admins del grupo.*',
-    botAdmin: '* ⚠️ Para poder usar este comando es necesario que yo sea admin.*',
+    rowner: '* [ ❗ ] Este comando solo puede ser utilizado por el/la propietario(a) (owner) del Bot.*',
+    owner: '* [ ❗ ] Este comando solo puede ser utilizado por el/la propietario(a) (owner) del Bot.*',
+    mods: '* [ ❗ ] Este comando solo puede ser utilizado por moderadores y el/la propietario(a) (owner) del Bot.*',
+    premium: '* [ ❗ ] Este comando solo puede ser utilizado por usarios premium y el/la propietario(a) (owner) del Bot.*',
+    group: '* [ ❗ ] Este comando solo puede ser utilizado en grupos.*',
+    private: '* [ ❗ ] Este comando solo puede ser utilizado en el chat privado del Bot.*',
+    admin: '* [ ❗ ] Este comando solo puede ser usado por admins del grupo.*',
+    botAdmin: '* [ ❗ ] Para poder usar este comando es necesario que yo sea admin.*',
     unreg: '* 🛑 Hey!! Alto, no estas registrado 🛑 *\n\n* Para poder usar este comando debes registrarte, usa el comando:*\n*➣ #verificar nombre.edad*',
-    restrict: '* ⚠️ Este comando esta restringido/desactivado por desición del propietario(a) (owner) del Bot.*',
+    restrict: '* [ ❗ ] Este comando esta restringido/desactivado por desición del propietario(a) (owner) del Bot.*',
   }[type];
   const aa = {quoted: m, userJid: conn.user.jid};
-  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: ' 𝐀𝐕𝐈𝐒𝐎 - 𝐀𝐋𝐄𝐑𝐓𝐀', body: '@𝐋𝐀𝐑𝐈𝐎𝐒.𝐏𝐒𝐃', thumbnail: imagen1, sourceUrl: 'https://github.com/Mlarios-2021097/Larios.Bot'}}}}, aa);
+  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: ' 𝐀𝐕𝐈𝐒𝐎 - 𝐀𝐋𝐄𝐑𝐓𝐀', body: '𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕', thumbnail: imagen1, sourceUrl: 'https://github.com/LxShadow/Vz'}}}}, aa);
   if (msg) return conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id});
 };
 
