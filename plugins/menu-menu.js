@@ -4,7 +4,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   try {
     const pp = imagen4;
     // let vn = './media/menu.mp3'
-    const img = './SHADOW.jpeg';
+    const img = './allmenu.png';
     const d = new Date(new Date + 3600000);
     const locale = 'es';
     const week = d.toLocaleDateString(locale, {weekday: 'long'});
@@ -28,13 +28,13 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  ┃➤
  ┃➤ 𝐂𝐫𝐞𝐚𝐝𝐨𝐫 : 𝑺𝒉𝒂𝒅𝒐𝒘 ❄
  ┃➤ 𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 : https://www.instagram.com/shadow.vz/
- ┃➤ 𝗡𝘂𝗺𝗲𝗿𝗼 wa.me/525541081250
- ┃➤ 𝐀𝐜𝐭𝐢𝐯𝐨 : ${date}
+ ┃➤ Nᴜᴍᴇʀᴏ wa.me/525541081250
+ ┃➤ Fᴇᴄʜᴀ : ${date}
  ╰━━━━━━━━━━━━━
 
  ╭━      ❄ 𝑨𝒅𝒒𝒖𝒓𝒊𝒓 𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕 ❄
  ┃➤ ${usedPrefix}Preciobot / Comprar El Bot
- ┃➤ ${usedPrefix}Proveedor / Deseas Vender 🇸​🇭​🇦​🇩​🇴​🇼​🇸​ 🇧​🇴​🇹​ ?
+ ┃➤ ${usedPrefix}Proveedor / Deseas Vender Sʜᴀᴅᴏᴡs Bᴏᴛs ?
  ╰━━━━━━━━━━━━━
   
  ╭━      ❄ 𝑰𝒏𝒇𝒐 𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕 ❄ 
