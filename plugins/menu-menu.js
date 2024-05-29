@@ -44,11 +44,6 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  ┃➤ ${usedPrefix}velocidad
  ╰━━━━━━━━━━━━━
 
- ╭━     ❄ 𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕 𝑬𝒅𝒊𝒕𝒔 ❄ 
- ┃➤ ${usedPrefix}ApkEdits
- ┃➤ ${usedPrefix}DriveEdits
- ╰━━━━━━━━━━━━━
-  
  ╭━     ❄ 𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕 𝑱𝒖𝒆𝒈𝒐𝒔 ❄ 
  ┃➤ ${usedPrefix}mates | matemáticas | math
  ┃➤ ${usedPrefix}lanzar *cara* | *cruz*
