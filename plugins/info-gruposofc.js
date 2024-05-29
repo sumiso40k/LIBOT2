@@ -1,18 +1,17 @@
 const handler = async (m, {conn, usedPrefix}) => {
   const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
   const document = doc[Math.floor(Math.random() * doc.length)];
-  const text = `*𝙷𝙾𝙻𝙰 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 👋🏻, 𝚃𝙴 𝙸𝙽𝚅𝙸𝚃𝙾 𝙰 𝚄𝙽𝙸𝚁𝚃𝙴 𝙰 𝙻𝙾𝚂 𝙶𝚁𝚄𝙿𝙾𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂 𝙳𝙴 𝚃𝙷𝙴 𝚂𝙷𝙰𝙳𝙾𝚆 𝙱𝚁𝙾𝙺𝙴𝚁𝚂 - 𝚃𝙴𝙰𝙼 𝙿𝙰𝚁𝙰 𝙲𝙾𝙽𝚅𝙸𝚅𝙸𝚁 𝙲𝙾𝙽 𝙻𝙰 𝙲𝙾𝙼𝚄𝙽𝙸𝙳𝙰𝙳 :D*
+  const text = `*𝑯𝒐𝒍𝒂, 𝑻𝒆 𝑰𝒏𝒗𝒊𝒕𝒐 𝑨 𝑼𝒏𝒊𝒓𝒕𝒆 𝑨 𝑳𝒐𝒔 𝑮𝒓𝒖𝒑𝒐𝒔 𝑶𝒇𝒊𝒄𝒊𝒂𝒆𝒔 𝑫𝒆 𝑪/𝑽 𝑫𝒆 𝑴𝒊 𝑪𝒓𝒆𝒂𝒅𝒐𝒓
 
-*➤ 𝙶𝚛𝚞𝚙𝚘𝚜 𝚘𝚏𝚒𝚌𝚒𝚊𝚕𝚎𝚜 𝚍𝚎𝚕 𝙱𝚘𝚝:*
-*1.-* https://chat.whatsapp.com/LjJbmdO0qSDEKgB60qivZj
+*➤ 𝙶𝚛𝚞𝚙𝚘𝚜 𝚘𝚏𝚒𝚌𝚒𝚊𝚕𝚎𝚜:*
+*1.-* 
+https://chat.whatsapp.com/LB0R72iDtxsEDuaacQcj4T
 
-*2.-* https://chat.whatsapp.com/DbXBmsydWBE1ZN3EoY0hRs
+qi
+*2.-* 
+https://chat.whatsapp.com/E4z6yjLvz4b9IIbfydVIyM
 
-*3.-* https://chat.whatsapp.com/BW0P22xx7EGBTdH5IM851F
-
-*4.-* https://chat.whatsapp.com/CjexkGVr37J6GuSdDVAHzC
-
-*5.-* https://chat.whatsapp.com/DLrFJUPxEQ2IrOm7sJWJ0k`.trim();
+`.trim();
   const buttonMessage= {
     'document': {url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD`},
     'mimetype': `application/${document}`,
