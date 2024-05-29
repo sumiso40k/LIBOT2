@@ -31,11 +31,6 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  ┃➤ Nᴜᴍᴇʀᴏ wa.me/525541081250
  ┃➤ Fᴇᴄʜᴀ : ${date}
  ╰━━━━━━━━━━━━━
-
- ╭━      ❄ 𝑨𝒅𝒒𝒖𝒓𝒊𝒓 𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕 ❄
- ┃➤ ${usedPrefix}Preciobot / Comprar El Bot
- ┃➤ ${usedPrefix}Proveedor / Deseas Vender Sʜᴀᴅᴏᴡs Bᴏᴛs ?
- ╰━━━━━━━━━━━━━
   
  ╭━      ❄ 𝑰𝒏𝒇𝒐 𝑺𝒉𝒂𝒅𝒐𝒘𝒔 𝑩𝒐𝒕 ❄ 
  ┃➤ ${usedPrefix}listagrupos
