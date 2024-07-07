@@ -44,12 +44,12 @@ global.titulowm2 = `𝑳𝒚𝑩𝒐𝒕`
 global.igfg = '𝑳𝒚𝑩𝒐𝒕';
 global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
 
-global.imagen1 = fs.readFileSync('./menly.png');
-global.imagen2 = fs.readFileSync('./src/avaly.png');
-global.imagen3 = fs.readFileSync('./src/avaly.png');
-global.imagen4 = fs.readFileSync('./menly.png');
-global.imagen5 = fs.readFileSync('./src/avaly.png');
-global.imagen6 = fs.readFileSync('./menly.png');
+global.imagen1 = fs.readFileSync('./lymenu.png');
+global.imagen2 = fs.readFileSync('./src/avalybot.png');
+global.imagen3 = fs.readFileSync('./src/avalybot.png');
+global.imagen4 = fs.readFileSync('./lymenu.png');
+global.imagen5 = fs.readFileSync('./src/avalybot.png');
+global.imagen6 = fs.readFileSync('./lymenu.png');
 
 global.mods = [];
 
