@@ -10,38 +10,38 @@ import moment from 'moment-timezone';
 global.botnumber = ""
 
 global.owner = [
-  ['5218715734733', ' 𝑳𝒚𝑩𝒐𝒕 ', true],
-  ['5218715734733', ' 𝑳𝒚𝑩𝒐𝒕 ', true],
-  ['5218715734733', ' 𝑳𝒚𝑩𝒐𝒕 ', true],
-  ['5218715734733', ' 𝑳𝒚𝑩𝒐𝒕', true],
-  ['5218715734733', ' 𝑳𝒚𝑩𝒐𝒕 ', true],
-  ['5218715734733', ' 𝑳𝒚𝑩𝒐𝒕 ', true],
-  ['5218715734733', ' 𝑳𝒚𝑩𝒐𝒕 ', true],
-  ['5218715734733', ' 𝑳𝒚𝑩𝒐𝒕 ', false],
-  ['5218715734733', ' 𝑳𝒚𝑩𝒐𝒕 ', true],
-  ['5218715734733','  𝑳𝒚𝑩𝒐𝒕  ', true],
-  ['5218715734733'],
-  ['5218715734733'],
-  ['5218715734733'],
-  ['5218715734733'],
-  ['5218715734733'],
-  ['5218715734733'],
-  ['5218715734733'],
-  ['5218715734733'], 
-  ['5218715734733'],  
-  ['5218715734733'], 
-  ['5218715734733']
+  ['5217421160806', ' 𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁 ', true],
+  ['5217421160806', ' 𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁 ', true],
+  ['5217421160806', ' 𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁 ', true],
+  ['5217421160806', ' 𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁', true],
+  ['5217421160806', ' 𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁 ', true],
+  ['5217421160806', ' 𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁 ', true],
+  ['5217421160806', ' 𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁 ', true],
+  ['5217421160806', ' 𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁 ', false],
+  ['5217421160806', ' 𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁 ', true],
+  ['5217421160806','  𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁  ', true],
+  ['5217421160806'],
+  ['5217421160806'],
+  ['5217421160806'],
+  ['5217421160806'],
+  ['5217421160806'],
+  ['5217421160806'],
+  ['5217421160806'],
+  ['5217421160806'], 
+  ['5217421160806'],  
+  ['5217421160806'], 
+  ['5217421160806']
 ];
 
-global.suittag = ['5218715734733'];
-global.prems = ['5218715734733'];
+global.suittag = ['5217421160806'];
+global.prems = ['5217421160806'];
 
-global.packname = '𝑳𝒚𝑩𝒐𝒕';
-global.author = '𝑳𝒚𝑩𝒐𝒕';
-global.wm = '𝑳𝒚𝑩𝒐𝒕';
-global.titulowm = '𝑳𝒚𝑩𝒐𝒕';
-global.titulowm2 = `𝑳𝒚𝑩𝒐𝒕`
-global.igfg = '𝑳𝒚𝑩𝒐𝒕';
+global.packname = '𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁';
+global.author = '𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁';
+global.wm = '𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁';
+global.titulowm = '𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁';
+global.titulowm2 = `𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁`
+global.igfg = '𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁';
 global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
 
 global.imagen1 = fs.readFileSync('./lymenu.png');
@@ -62,15 +62,15 @@ global.mes = d.toLocaleDateString('es', {month: 'long'});
 global.año = d.toLocaleDateString('es', {year: 'numeric'});
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true});
 //* ****************************
-global.wm2 = `▸ ${dia} ${fecha}\n 𝑳𝒚𝑩𝒐𝒕`;
-global.gt = '𝑳𝒚𝑩𝒐𝒕';
-global.mysticbot = '𝑳𝒚𝑩𝒐𝒕';
+global.wm2 = `▸ ${dia} ${fecha}\n 𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁`;
+global.gt = '𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁';
+global.mysticbot = '𝗪𝗶𝗻𝗻𝗶𝗲 𝗯𝗼𝘁';
 global.md = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
 global.mysticbot = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
 global.waitt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
 global.waittt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
 global.waitttt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
-global.nomorown = '5218715734733';
+global.nomorown = '5217421160806';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
 global.cmenub = '┊✦ ';
